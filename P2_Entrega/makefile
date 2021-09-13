@@ -1,0 +1,11 @@
+shell.out: shell.c file_system.o list.o
+	gcc -o shell.out shell.c file_system.o list.o
+
+file_system.o: file_system.c file_system.h
+	gcc -c -o file_system.o file_system.c
+
+list.o: list.c list.h
+	gcc -c -o list.o list.c
+
+clean:
+	rm shell.out file_system.o list.o
